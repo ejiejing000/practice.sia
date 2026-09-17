@@ -12,8 +12,8 @@ const CYAN = '\x1b[36m';
 const GRAY = '\x1b[90m';
 
 // Creeper Blocks
-const G = '\x1b[42m  \x1b[0m'; // Green block
-const B = '\x1b[40m  \x1b[0m'; // Black block
+const G = '\x1b[42m  \x1b[0m'; 
+const B = '\x1b[40m  \x1b[0m'; 
 
 // 8x8 Creeper Grid
 const creeper = [
@@ -29,25 +29,24 @@ const creeper = [
 
 // Banner Content
 const message = [
- '${GREEN}========================================${RESET}',
-  '${BOLD}${GOLD}   ★ HAPPY BIRTHDAY JANINE! ★ ${RESET}',
-  '${GREEN}========================================${RESET}',
-  '${CYAN}         /[\\/\\${RESET}  ${GRAY}<- Diamond Sword${RESET}',
-  '${CYAN}        / /  \\${RESET}',
-  '${CYAN}  *====/ /${RESET}',
-  '${DARK_GREEN}      ( )${RESET}',
-  '${GREEN}----------------------------------------${RESET}'
+  `${GREEN}========================================${RESET}`,
+  `${BOLD}${GOLD}   ★ HAPPY BIRTHDAY JANINE! ★ ${RESET}`,
+  `${GREEN}========================================${RESET}`,
+  `${CYAN}         /[\\/\\${RESET}  ${GRAY}<- Diamond Sword${RESET}`,
+  `${CYAN}        / /  \\${RESET}`,
+  `${CYAN}  *====/ /${RESET}`,
+  `${DARK_GREEN}      ( )${RESET}`,
+  `${GREEN}----------------------------------------${RESET}`
 ];
 
 app.listen(PORT, () => {
-  console.log('Server running on http://localhost:${PORT}\n');
+  console.log(`Server running on http://localhost:${PORT}\n`);
 
-  // Side-by-side rendering: Creeper on the left, Message on the right
   creeper.forEach((row, i) => {
     const creeperRow = row.join('');
     const textRow = message[i] || '';
-    console.log('${creeperRow}   ${textRow}');
+    console.log(`${creeperRow}   ${textRow}`);
   });
 
-  console.log('\n${BOLD}${GREEN}Have a legendary adventure! 🎉${RESET}\n');
+  console.log(`\n${BOLD}${GREEN}Have a legendary adventure! 🎉${RESET}\n`);
 });
