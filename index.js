@@ -71,5 +71,5 @@ app.listen(PORT, () => {
     console.log(`            ${creeperRow}   ${cakeRow}   ${chickenRow}`);
   }
 
-  console.log(`\n         ${BOLD}${GREEN}     🐔 Have a legendary adventure! 🐔${RESET}\n`);
+  console.log(`\n         ${BOLD}${GREEN}     🐔 Have an epic adventure! 🐔${RESET}\n`);
 });
